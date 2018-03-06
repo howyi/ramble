@@ -16,7 +16,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('user/{name}', function ($name) {
-	return $name;
-})->where('name', '[A-Za-z]+');
